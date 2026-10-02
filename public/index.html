@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Psychology 101 — Flashcards & Practice Test</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Top Navigation Header -->
+    <header class="app-header">
+      <div class="brand">
+        <div class="logo-icon">🧠</div>
+        <div class="brand-text">
+          <h1>Psychology 101</h1>
+          <span class="badge-sub">Mastery & Practice Platform</span>
+        </div>
+      </div>
+
+      <nav class="nav-tabs" role="tablist">
+        <button class="nav-tab active" data-tab="learn" id="tab-learn" role="tab" aria-selected="true">
+          <span class="icon">📇</span>
+          <span>Learning Mode</span>
+        </button>
+        <button class="nav-tab" data-tab="quiz" id="tab-quiz" role="tab" aria-selected="false">
+          <span class="icon">📝</span>
+          <span>Practice Test</span>
+        </button>
+        <button class="nav-tab" data-tab="stats" id="tab-stats" role="tab" aria-selected="false">
+          <span class="icon">📊</span>
+          <span>Stats & Progress</span>
+        </button>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="tts-toggle" title="Toggle Audio Narration" aria-label="Toggle Audio Narration">
+          <span id="tts-icon">🔊</span>
+        </button>
+        <button class="icon-btn" id="theme-toggle" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+          <span id="theme-icon">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Global Notification Banner -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- MAIN VIEW CONTAINER -->
+    <main class="main-content">
+
+      <!-- ================= 1. LEARNING MODE (FLASHCARDS) ================= -->
+      <section id="view-learn" class="tab-view active">
+        <!-- Deck Controls & Filters -->
+        <div class="deck-controls card-panel">
+          <div class="filter-group">
+            <div class="control-item">
+              <label for="category-filter">Category:</label>
+              <select id="category-filter" class="form-select">
+                <option value="All">All Categories (50 Cards)</option>
+              </select>
+            </div>
+
+            <div class="control-item">
+              <label for="status-filter">Filter Status:</label>
+              <select id="status-filter" class="form-select">
+                <option value="all">All Cards</option>
+                <option value="learning">Still Learning</option>
+                <option value="mastered">Mastered Only</option>
+                <option value="starred">Starred ⭐</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="deck-actions">
+            <button class="btn btn-secondary btn-sm" id="btn-shuffle" title="Shuffle Cards">
+              <span>🔀</span> Shuffle
+            </button>
+            <button class="btn btn-secondary btn-sm" id="btn-shortcuts-modal" title="View Keyboard Shortcuts">
+              <span>⌨️</span> Shortcuts
+            </button>
+          </div>
+        </div>
+
+        <!-- Progress Bar & Stats Pill -->
+        <div class="deck-meta">
+          <div class="deck-counter">
+            <span class="meta-label">Card</span>
+            <span class="current-card-num" id="current-card-idx">1</span>
+            <span class="meta-separator">of</span>
+            <span class="total-cards-num" id="total-cards-idx">50</span>
+          </div>
+
+          <div class="deck-progress-track">
+            <div class="deck-progress-bar" id="learning-progress-bar" style="width: 2%;"></div>
+          </div>
+
+          <div class="deck-stat-badges">
+            <span class="status-pill pill-mastered" title="Mastered Cards">
+              <span class="dot"></span> <span id="stat-mastered-count">0</span> Mastered
+            </span>
+            <span class="status-pill pill-learning" title="Cards Still Learning">
+              <span class="dot"></span> <span id="stat-learning-count">0</span> Learning
+            </span>
+          </div>
+        </div>
+
+        <!-- The 3D Flashcard Container -->
+        <div class="flashcard-scene">
+          <div class="flashcard" id="flashcard" role="button" tabindex="0" aria-label="Flashcard. Click or press Space to flip.">
+            <!-- Front Face -->
+            <div class="card-face card-front">
+              <div class="card-face-header">
+                <div class="badges-row">
+                  <span class="category-chip" id="card-category">Category</span>
+                  <span class="difficulty-chip" id="card-difficulty">Medium</span>
+                </div>
+                <div class="card-top-actions">
+                  <button class="card-action-btn" id="btn-speak-question" title="Read Aloud">🔊</button>
+                  <button class="card-action-btn" id="btn-star-card" title="Star this card">☆</button>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <span class="card-prompt-label">QUESTION / CONCEPT</span>
+                <p class="card-question-text" id="card-question-front">Loading question...</p>
+              </div>
+
+              <div class="card-face-footer">
+                <span class="flip-hint">
+                  <span class="flip-icon">🔄</span> Click card or press <strong>Space</strong> to reveal answer
+                </span>
+              </div>
+            </div>
+
+            <!-- Back Face -->
+            <div class="card-face card-back">
+              <div class="card-face-header">
+                <div class="badges-row">
+                  <span class="category-chip" id="card-category-back">Category</span>
+                  <span class="badge-answer-tag">CORRECT ANSWER</span>
+                </div>
+                <div class="card-top-actions">
+                  <button class="card-action-btn" id="btn-speak-answer" title="Read Answer Aloud">🔊</button>
+                  <button class="card-action-btn" id="btn-star-card-back" title="Star this card">☆</button>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <h3 class="card-answer-text" id="card-answer-back">Answer</h3>
+                <div class="card-explanation-box">
+                  <span class="explanation-title">💡 Explanation & Context:</span>
+                  <p id="card-explanation-text">Detailed explanation...</p>
+                </div>
+              </div>
+
+              <div class="card-face-footer">
+                <span class="flip-hint">
+                  <span class="flip-icon">🔄</span> Click or press <strong>Space</strong> to flip back
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard Action Buttons -->
+        <div class="card-controls-toolbar">
+          <button class="btn btn-secondary btn-icon-round" id="btn-prev-card" title="Previous Card (Left Arrow)">
+            ◀
+          </button>
+
+          <div class="mastery-buttons">
+            <button class="btn btn-learning" id="btn-mark-learning" title="Mark Still Learning (Key 1)">
+              <span class="btn-icon">⏳</span> Still Learning
+            </button>
+            <button class="btn btn-flip" id="btn-flip-card" title="Flip Card (Spacebar)">
+              <span class="btn-icon">🔄</span> Flip Card
+            </button>
+            <button class="btn btn-mastered" id="btn-mark-mastered" title="Mark Mastered (Key 2)">
+              <span class="btn-icon">✅</span> Mastered
+            </button>
+          </div>
+
+          <button class="btn btn-secondary btn-icon-round" id="btn-next-card" title="Next Card (Right Arrow)">
+            ▶
+          </button>
+        </div>
+      </section>
+
+      <!-- ================= 2. PRACTICE TEST MODE ================= -->
+      <section id="view-quiz" class="tab-view">
+        <!-- Step 1: Quiz Configuration -->
+        <div id="quiz-config-panel" class="card-panel quiz-setup-card">
+          <div class="setup-header">
+            <h2>📝 Psychology 101 Practice Test</h2>
+            <p>Test your knowledge with multiple-choice questions curated directly from the database.</p>
+          </div>
+
+          <form id="quiz-setup-form" class="setup-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="quiz-count">Number of Questions:</label>
+                <div class="radio-pill-group">
+                  <label class="radio-pill">
+                    <input type="radio" name="quiz-count" value="10" checked>
+                    <span>10 Questions (Quick)</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="quiz-count" value="25">
+                    <span>25 Questions (Midterm)</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="quiz-count" value="50">
+                    <span>50 Questions (Full Final)</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="quiz-category">Category Focus:</label>
+                <select id="quiz-category" class="form-select">
+                  <option value="All">All Categories (Comprehensive Exam)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="quiz-timer">Timer Option:</label>
+                <select id="quiz-timer" class="form-select">
+                  <option value="0">Untimed (Practice at your own pace)</option>
+                  <option value="45">Timed (45 seconds per question)</option>
+                  <option value="60">Timed (60 seconds per question)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="quiz-feedback-mode">Feedback Timing:</label>
+                <div class="radio-pill-group">
+                  <label class="radio-pill">
+                    <input type="radio" name="quiz-feedback" value="exam" checked>
+                    <span>Exam Mode (Results at End)</span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="quiz-feedback" value="instant">
+                    <span>Instant Mode (Check After Each)</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="setup-actions">
+              <button type="submit" class="btn btn-primary btn-lg" id="btn-start-quiz">
+                🚀 Start Practice Test
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Step 2: Active Quiz In-Progress -->
+        <div id="quiz-active-panel" class="quiz-active-card hidden">
+          <div class="quiz-top-bar card-panel">
+            <div class="quiz-progress-info">
+              <span class="quiz-step-text">Question <strong id="quiz-q-current">1</strong> of <strong id="quiz-q-total">10</strong></span>
+              <div class="quiz-progress-track">
+                <div class="quiz-progress-bar" id="quiz-progress-bar" style="width: 10%;"></div>
+              </div>
+            </div>
+
+            <div class="quiz-header-right">
+              <div class="quiz-timer-badge" id="quiz-timer-badge">
+                ⏱️ <span id="quiz-timer-display">--:--</span>
+              </div>
+              <button class="btn btn-outline btn-sm" id="btn-flag-question">
+                <span id="flag-icon">🚩</span> Flag
+              </button>
+            </div>
+          </div>
+
+          <!-- Question Grid Navigator Drawer -->
+          <div class="quiz-grid-navigator card-panel" id="quiz-grid-navigator">
+            <!-- Dynamically generated question number pills -->
+          </div>
+
+          <!-- Question Card -->
+          <div class="quiz-question-card card-panel">
+            <div class="question-meta-row">
+              <span class="category-chip" id="quiz-question-cat">Category</span>
+              <span class="difficulty-chip" id="quiz-question-diff">Difficulty</span>
+            </div>
+
+            <h3 class="quiz-question-text" id="quiz-question-text">Question goes here...</h3>
+
+            <!-- 4 Multiple Choice Options -->
+            <div class="quiz-options-list" id="quiz-options-container">
+              <!-- Rendered via JS -->
+            </div>
+
+            <!-- Instant Feedback Message (shown only in Instant mode) -->
+            <div class="instant-feedback-box hidden" id="instant-feedback-box">
+              <div class="feedback-badge" id="feedback-badge">Correct!</div>
+              <p id="feedback-explanation">Explanation...</p>
+            </div>
+
+            <!-- Quiz Navigation Footer -->
+            <div class="quiz-footer-toolbar">
+              <button class="btn btn-secondary" id="btn-quiz-prev">
+                ◀ Previous
+              </button>
+
+              <div class="quiz-footer-center">
+                <button class="btn btn-outline btn-sm" id="btn-clear-choice">Clear Selection</button>
+              </div>
+
+              <div class="quiz-footer-right">
+                <button class="btn btn-secondary" id="btn-quiz-next">
+                  Next ▶
+                </button>
+                <button class="btn btn-primary" id="btn-quiz-submit">
+                  Finish & Submit Test
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Practice Test Scorecard & Review -->
+        <div id="quiz-result-panel" class="quiz-result-card hidden">
+          <!-- Canvas for celebratory confetti -->
+          <canvas id="confetti-canvas" class="confetti-canvas"></canvas>
+
+          <div class="card-panel score-hero-card">
+            <div class="score-badge-circle" id="score-circle">
+              <span class="score-percent" id="result-percent">0%</span>
+              <span class="score-grade" id="result-grade">A</span>
+            </div>
+
+            <div class="score-summary-details">
+              <h2 id="result-headline">Great Job!</h2>
+              <p class="score-subtext" id="result-subtext">You scored <strong>X</strong> out of <strong>Y</strong> questions correctly.</p>
+
+              <div class="score-metrics-grid">
+                <div class="metric-card">
+                  <span class="metric-label">Time Spent</span>
+                  <span class="metric-val" id="result-time">0m 00s</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-label">Accuracy</span>
+                  <span class="metric-val" id="result-accuracy">0%</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-label">Saved to Database</span>
+                  <span class="metric-val">✅ psych101.db</span>
+                </div>
+              </div>
+
+              <div class="score-actions-row">
+                <button class="btn btn-primary" id="btn-retake-quiz">🔄 Take Another Test</button>
+                <button class="btn btn-secondary" id="btn-study-missed">📖 Study Missed in Flashcards</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category Breakdown Section -->
+          <div class="card-panel category-analysis-card">
+            <h3>📊 Domain Performance Breakdown</h3>
+            <div class="category-bars-list" id="quiz-category-breakdown">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- Comprehensive Question-by-Question Review -->
+          <div class="card-panel test-review-card">
+            <div class="review-header">
+              <h3>🔍 Detailed Question Review</h3>
+              <div class="review-filters">
+                <button class="filter-pill active" data-filter="all">All (<span id="rev-count-all">0</span>)</button>
+                <button class="filter-pill" data-filter="incorrect">Incorrect Only (<span id="rev-count-wrong">0</span>)</button>
+                <button class="filter-pill" data-filter="correct">Correct (<span id="rev-count-right">0</span>)</button>
+              </div>
+            </div>
+
+            <div class="review-questions-list" id="review-questions-container">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 3. STATS & PROGRESS VIEW ================= -->
+      <section id="view-stats" class="tab-view">
+        <div class="stats-overview-grid">
+          <div class="card-panel stat-card">
+            <span class="stat-icon">🎓</span>
+            <div class="stat-info">
+              <span class="stat-title">Cards Mastered</span>
+              <div class="stat-number">
+                <span id="dash-mastered-count">0</span>
+                <span class="stat-total">/ 50</span>
+              </div>
+              <span class="stat-desc" id="dash-mastered-pct">0% mastered</span>
+            </div>
+          </div>
+
+          <div class="card-panel stat-card">
+            <span class="stat-icon">⏳</span>
+            <div class="stat-info">
+              <span class="stat-title">Still Learning</span>
+              <div class="stat-number" id="dash-learning-count">0</div>
+              <span class="stat-desc">Cards marked for practice</span>
+            </div>
+          </div>
+
+          <div class="card-panel stat-card">
+            <span class="stat-icon">🏆</span>
+            <div class="stat-info">
+              <span class="stat-title">Practice Test High Score</span>
+              <div class="stat-number" id="dash-high-score">0%</div>
+              <span class="stat-desc" id="dash-tests-count">0 tests completed</span>
+            </div>
+          </div>
+
+          <div class="card-panel stat-card">
+            <span class="stat-icon">⭐</span>
+            <div class="stat-info">
+              <span class="stat-title">Starred Cards</span>
+              <div class="stat-number" id="dash-starred-count">0</div>
+              <span class="stat-desc">Flagged for extra review</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Progress Matrix -->
+        <div class="card-panel category-matrix-card">
+          <div class="panel-header">
+            <h3>📚 Category Mastery Matrix</h3>
+            <span class="panel-sub">Track readiness across all 10 Psychology 101 domains</span>
+          </div>
+          <div class="category-grid" id="dash-category-grid">
+            <!-- Rendered via JS -->
+          </div>
+        </div>
+
+        <!-- Recent Test Attempts History -->
+        <div class="card-panel history-table-card">
+          <div class="panel-header">
+            <h3>📜 Practice Test History (Stored in SQLite)</h3>
+            <span class="panel-sub">Record of your past test attempts and performance</span>
+          </div>
+
+          <div class="table-responsive">
+            <table class="history-table">
+              <thead>
+                <tr>
+                  <th>Test ID</th>
+                  <th>Date & Time</th>
+                  <th>Score</th>
+                  <th>Percentage</th>
+                  <th>Time Spent</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="history-table-body">
+                <tr><td colspan="6" class="text-center">No tests completed yet. Take a practice test to see your history!</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Danger Zone / Data Management -->
+        <div class="card-panel danger-zone-card">
+          <div class="danger-info">
+            <h4>Data Management</h4>
+            <p>Reset all card review counts, mastery tags, and test history from the local database.</p>
+          </div>
+          <button class="btn btn-danger btn-sm" id="btn-reset-data">
+            🗑️ Reset All Progress
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Keyboard Shortcuts Modal -->
+    <div class="modal-backdrop hidden" id="shortcuts-modal">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <h3>⌨️ Keyboard Shortcuts</h3>
+          <button class="modal-close-btn" id="btn-close-shortcuts">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="shortcut-list">
+            <div class="shortcut-item">
+              <kbd>Space</kbd> / <kbd>Enter</kbd>
+              <span>Flip card between Question & Answer</span>
+            </div>
+            <div class="shortcut-item">
+              <kbd>→</kbd> or <kbd>J</kbd>
+              <span>Next Flashcard</span>
+            </div>
+            <div class="shortcut-item">
+              <kbd>←</kbd> or <kbd>K</kbd>
+              <span>Previous Flashcard</span>
+            </div>
+            <div class="shortcut-item">
+              <kbd>1</kbd>
+              <span>Mark "Still Learning" & Advance</span>
+            </div>
+            <div class="shortcut-item">
+              <kbd>2</kbd>
+              <span>Mark "Mastered" & Advance</span>
+            </div>
+            <div class="shortcut-item">
+              <kbd>S</kbd>
+              <span>Toggle Star / Favorite</span>
+            </div>
+            <div class="shortcut-item">
+              <kbd>R</kbd>
+              <span>Shuffle Flashcards</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" id="btn-modal-gotit">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

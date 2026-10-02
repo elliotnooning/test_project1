@@ -1,0 +1,752 @@
+[
+  {
+    "id": 1,
+    "category": "History & Approaches",
+    "difficulty": "Easy",
+    "question": "Who established the first formal psychology laboratory in Leipzig, Germany in 1879, marking the formal birth of psychology as an independent science?",
+    "answer": "Wilhelm Wundt",
+    "explanation": "Wilhelm Wundt is recognized as the 'Father of Modern Psychology'. In 1879, he founded the first psychological laboratory at the University of Leipzig, utilizing objective introspection to analyze the basic structural elements of conscious experience.",
+    "options": [
+      "Wilhelm Wundt",
+      "Sigmund Freud",
+      "William James",
+      "John B. Watson"
+    ],
+    "correct_index": 0
+  },
+  {
+    "id": 2,
+    "category": "Research Methods",
+    "difficulty": "Medium",
+    "question": "Which research methodology is the only one that allows researchers to isolate cause-and-effect relationships between variables?",
+    "answer": "Controlled Experiment",
+    "explanation": "Only controlled experiments—through direct manipulation of an independent variable and random assignment to control confounding variables—can demonstrate cause and effect. Correlational and observational studies only establish relationships, not causation.",
+    "options": [
+      "Naturalistic Observation",
+      "Correlational Study",
+      "Controlled Experiment",
+      "Archival Case Study"
+    ],
+    "correct_index": 2
+  },
+  {
+    "id": 3,
+    "category": "Research Methods",
+    "difficulty": "Easy",
+    "question": "In a study investigating the effect of caffeine on exam performance, the dose of caffeine administered is the:",
+    "answer": "Independent Variable",
+    "explanation": "The independent variable (IV) is the factor deliberately manipulated or varied by the researcher to determine its effect. The exam score would be the dependent variable (DV) that is measured.",
+    "options": [
+      "Dependent Variable",
+      "Confounding Variable",
+      "Independent Variable",
+      "Extraneous Variable"
+    ],
+    "correct_index": 2
+  },
+  {
+    "id": 4,
+    "category": "Research Methods",
+    "difficulty": "Medium",
+    "question": "What research procedure ensures that neither the participants nor the research assistants administering the treatments know who is receiving the active drug versus a placebo?",
+    "answer": "Double-Blind Procedure",
+    "explanation": "A double-blind procedure protects the validity of experimental results by eliminating both participant expectancy effects (the placebo effect) and researcher confirmation bias.",
+    "options": [
+      "Single-Blind Procedure",
+      "Double-Blind Procedure",
+      "Stratified Sampling",
+      "Cross-Sectional Design"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 5,
+    "category": "Research Methods",
+    "difficulty": "Medium",
+    "question": "A correlation coefficient of r = -0.87 between daily screen time and sleep quality indicates:",
+    "answer": "A strong inverse relationship where more screen time is associated with lower sleep quality",
+    "explanation": "The negative sign signifies an inverse relationship (as one variable rises, the other declines), and a magnitude of 0.87 represents a strong linear correlation. However, correlation alone does not prove that screen time directly causes poor sleep.",
+    "options": [
+      "A weak relationship because the correlation coefficient is negative",
+      "A strong inverse relationship where more screen time is associated with lower sleep quality",
+      "That screen time directly causes insomnia and poor sleep quality",
+      "Zero statistical predictability between the two variables"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 6,
+    "category": "Biological Bases",
+    "difficulty": "Easy",
+    "question": "Which component of the neuron is primarily responsible for receiving incoming chemical and electrical messages from neighboring neurons?",
+    "answer": "Dendrite",
+    "explanation": "Dendrites are branching treelike extensions that receive synaptic input from other neurons and conduct the impulses toward the cell body (soma).",
+    "options": [
+      "Axon Terminal",
+      "Dendrite",
+      "Myelin Sheath",
+      "Node of Ranvier"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 7,
+    "category": "Biological Bases",
+    "difficulty": "Medium",
+    "question": "The 'all-or-none' principle of neural transmission dictates that:",
+    "answer": "A neuron generates an action potential at full intensity or does not fire at all",
+    "explanation": "Once a neuron's electrical threshold of excitation (around -55 mV) is breached, an action potential fires at complete, invariant magnitude. A stronger stimulus causes the neuron to fire more frequently, not with greater voltage.",
+    "options": [
+      "All neurons in a reflex pathway must fire simultaneously",
+      "A neuron generates an action potential at full intensity or does not fire at all",
+      "Neurotransmitter release increases proportionally with stimulus amplitude",
+      "Synapses fire continuously until all available neurotransmitter is exhausted"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 8,
+    "category": "Biological Bases",
+    "difficulty": "Medium",
+    "question": "Which neurotransmitter is central to voluntary motor control, feelings of pleasure and reward, and is deficient in Parkinson's disease but hyperactive in schizophrenia?",
+    "answer": "Dopamine",
+    "explanation": "Dopamine influences movement, motivation, and reward reinforcement. Degeneration of dopamine-producing neurons in the substantia nigra leads to Parkinson's disease; overactive dopamine pathways are linked to positive symptoms of schizophrenia.",
+    "options": [
+      "Serotonin",
+      "GABA",
+      "Dopamine",
+      "Acetylcholine"
+    ],
+    "correct_index": 2
+  },
+  {
+    "id": 9,
+    "category": "Biological Bases",
+    "difficulty": "Easy",
+    "question": "Which lobe of the cerebral cortex houses the primary visual cortex, processing color, shape, and visual recognition?",
+    "answer": "Occipital Lobe",
+    "explanation": "Located at the back of the skull, the occipital lobe interprets visual information routed from the retinas via the optic nerves and thalamus.",
+    "options": [
+      "Temporal Lobe",
+      "Parietal Lobe",
+      "Frontal Lobe",
+      "Occipital Lobe"
+    ],
+    "correct_index": 3
+  },
+  {
+    "id": 10,
+    "category": "Biological Bases",
+    "difficulty": "Hard",
+    "question": "What broad band of nerve fibers connects the two cerebral hemispheres, allowing them to communicate and studied extensively in 'split-brain' patients?",
+    "answer": "Corpus Callosum",
+    "explanation": "The corpus callosum contains over 200 million axonal projections linking the left and right hemispheres. Surgical severing (callosotomy) to treat severe epilepsy allowed Roger Sperry and Michael Gazzaniga to demonstrate functional hemispheric lateralization.",
+    "options": [
+      "Hippocampus",
+      "Corpus Callosum",
+      "Pons",
+      "Basal Ganglia"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 11,
+    "category": "Biological Bases",
+    "difficulty": "Easy",
+    "question": "When faced with sudden physical danger, which division of the autonomic nervous system triggers the 'fight-or-flight' physiological response?",
+    "answer": "Sympathetic Nervous System",
+    "explanation": "The sympathetic nervous system mobilizes metabolic resources for action: heart rate and respiration increase, pupils dilate, and digestion halts. The parasympathetic system restores resting homeostasis ('rest and digest').",
+    "options": [
+      "Somatic Nervous System",
+      "Central Nervous System",
+      "Sympathetic Nervous System",
+      "Parasympathetic Nervous System"
+    ],
+    "correct_index": 2
+  },
+  {
+    "id": 12,
+    "category": "Biological Bases",
+    "difficulty": "Medium",
+    "question": "Which subcortical brain structure serves as the main relay station for incoming sensory signals (except smell), routing them to their respective cortical regions?",
+    "answer": "Thalamus",
+    "explanation": "The thalamus acts as the brain's sensory switchboard, directing sensory information (vision, audition, gustation, and somatosensation) to higher cortical areas. Olfactory signals bypass the thalamus directly to the limbic system.",
+    "options": [
+      "Hypothalamus",
+      "Thalamus",
+      "Amygdala",
+      "Medulla"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 13,
+    "category": "Sensation & Perception",
+    "difficulty": "Easy",
+    "question": "The smallest intensity of physical stimulation that an organism can detect at least 50% of the time is known as the:",
+    "answer": "Absolute Threshold",
+    "explanation": "The absolute threshold marks the minimum energy needed to stimulate sensory receptors half the time (for instance, tasting a single teaspoon of sugar dissolved in two gallons of water).",
+    "options": [
+      "Difference Threshold",
+      "Absolute Threshold",
+      "Subliminal Priming",
+      "Sensory Adaptation Level"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 14,
+    "category": "Sensation & Perception",
+    "difficulty": "Medium",
+    "question": "In the human eye, rods are specialized for ______, whereas cones are specialized for ______.",
+    "answer": "Dim light and peripheral vision; color vision and fine detail",
+    "explanation": "Rods (~120 million) are distributed throughout the periphery and are sensitive to dim light and motion. Cones (~6 million) are concentrated in the fovea centralis and provide high-acuity color vision in bright conditions.",
+    "options": [
+      "Color vision and fine detail; dim light and peripheral vision",
+      "Dim light and peripheral vision; color vision and fine detail",
+      "Detecting high-frequency sound; regulating intraocular pressure",
+      "Night vision; processing binocular depth disparity"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 15,
+    "category": "Sensation & Perception",
+    "difficulty": "Hard",
+    "question": "Staring fixatedly at a bright green patch and then looking at a neutral white surface creates a red negative afterimage. Which theory explains this result?",
+    "answer": "Opponent-Process Theory",
+    "explanation": "Ewald Hering's opponent-process theory states that visual receptors are linked in opposing pairs: red-green, blue-yellow, and black-white. Staring at green fatigues the green receptor, allowing the opposing red signal to rebound when looking at white.",
+    "options": [
+      "Trichromatic (Young-Helmholtz) Theory",
+      "Opponent-Process Theory",
+      "Frequency Matching Theory",
+      "Place Resonance Theory"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 16,
+    "category": "Sensation & Perception",
+    "difficulty": "Easy",
+    "question": "Which Gestalt organizational principle explains our tendency to perceive an incomplete or broken outline as a complete, unified geometric shape?",
+    "answer": "Closure",
+    "explanation": "The Gestalt law of closure demonstrates that our visual system automatically fills in gaps to perceive familiar whole objects rather than disconnected segments.",
+    "options": [
+      "Proximity",
+      "Similarity",
+      "Closure",
+      "Common Fate"
+    ],
+    "correct_index": 2
+  },
+  {
+    "id": 17,
+    "category": "Sensation & Perception",
+    "difficulty": "Medium",
+    "question": "When prior knowledge, expectations, and context guide how you interpret ambiguous sensory input, you are engaging in:",
+    "answer": "Top-Down Processing",
+    "explanation": "Top-down processing occurs when perception is driven by cognitive factors such as memories, context, and expectations. In contrast, bottom-up processing builds perceptions directly from raw sensory signals.",
+    "options": [
+      "Bottom-Up Processing",
+      "Top-Down Processing",
+      "Sensory Transduction",
+      "Feature Integration"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 18,
+    "category": "Learning & Conditioning",
+    "difficulty": "Easy",
+    "question": "In Ivan Pavlov's classic canine conditioning experiment, what stimulus served as the Unconditioned Stimulus (UCS)?",
+    "answer": "The meat powder / food",
+    "explanation": "The food naturally and unlearned-ly elicited salivation (the unconditioned response, UCR). The ringing bell/metronome was the conditioned stimulus (CS) that became paired with the food.",
+    "options": [
+      "The bell / metronome tone",
+      "The meat powder / food",
+      "Salivation to the tone",
+      "The laboratory technician's footsteps"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 19,
+    "category": "Learning & Conditioning",
+    "difficulty": "Medium",
+    "question": "In operant conditioning, taking away a teenager's car keys to decrease their reckless driving behavior is an example of:",
+    "answer": "Negative Punishment",
+    "explanation": "Punishment aims to weaken a target behavior. 'Negative' means removing or subtracting a desirable stimulus (car privileges) after the misbehavior occurs.",
+    "options": [
+      "Positive Reinforcement",
+      "Negative Reinforcement",
+      "Positive Punishment",
+      "Negative Punishment"
+    ],
+    "correct_index": 3
+  },
+  {
+    "id": 20,
+    "category": "Learning & Conditioning",
+    "difficulty": "Medium",
+    "question": "Pressing the snooze button to silence an annoying alarm clock is maintained by which behavioral mechanism?",
+    "answer": "Negative Reinforcement",
+    "explanation": "Negative reinforcement increases the likelihood of a behavior (hitting snooze) because it removes or terminates an unpleasant, aversive stimulus (the loud buzzing sound).",
+    "options": [
+      "Positive Reinforcement",
+      "Negative Reinforcement",
+      "Positive Punishment",
+      "Negative Punishment"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 21,
+    "category": "Learning & Conditioning",
+    "difficulty": "Hard",
+    "question": "Which schedule of operant reinforcement yields the highest and most steady rate of responding with the greatest resistance to extinction?",
+    "answer": "Variable-Ratio Schedule",
+    "explanation": "A variable-ratio (VR) schedule delivers reinforcement after an unpredictable number of responses (like gambling or slot machines), motivating sustained, rapid response rates.",
+    "options": [
+      "Fixed-Ratio Schedule",
+      "Fixed-Interval Schedule",
+      "Variable-Ratio Schedule",
+      "Variable-Interval Schedule"
+    ],
+    "correct_index": 2
+  },
+  {
+    "id": 22,
+    "category": "Learning & Conditioning",
+    "difficulty": "Medium",
+    "question": "When John Watson conditioned Little Albert to fear a white rat, Albert also began crying at the sight of a white rabbit, a dog, and a Santa Claus mask. This illustrated:",
+    "answer": "Stimulus Generalization",
+    "explanation": "Stimulus generalization happens when a conditioned response transfers to novel stimuli that share perceptual similarities with the original conditioned stimulus.",
+    "options": [
+      "Stimulus Discrimination",
+      "Stimulus Generalization",
+      "Spontaneous Recovery",
+      "Higher-Order Extinction"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 23,
+    "category": "Learning & Conditioning",
+    "difficulty": "Easy",
+    "question": "Albert Bandura's famous Bobo doll experiment demonstrated that children acquire novel aggressive behaviors primarily through:",
+    "answer": "Observational learning and vicarious modeling",
+    "explanation": "Bandura's Social Learning Theory showed that children readily imitate behaviors modeled by adults even in the absence of direct reinforcement or punishment.",
+    "options": [
+      "Inborn instinctual aggression",
+      "Direct classical conditioning",
+      "Observational learning and vicarious modeling",
+      "Continuous negative reinforcement"
+    ],
+    "correct_index": 2
+  },
+  {
+    "id": 24,
+    "category": "Memory & Cognition",
+    "difficulty": "Easy",
+    "question": "According to the Atkinson-Shiffrin model, what are the three stages of memory storage through which information progresses?",
+    "answer": "Sensory Memory -> Short-Term Memory -> Long-Term Memory",
+    "explanation": "Incoming stimuli first enter sensory memory (iconic/echoic); when attended to, they transition into short-term (working) memory, and with encoding/rehearsal, move to long-term storage.",
+    "options": [
+      "Sensory Memory -> Short-Term Memory -> Long-Term Memory",
+      "Iconic Memory -> Working Memory -> Implicit Memory",
+      "Short-Term Memory -> Semantic Memory -> Episodic Memory",
+      "Perceptual Memory -> Procedural Memory -> Permanent Storage"
+    ],
+    "correct_index": 0
+  },
+  {
+    "id": 25,
+    "category": "Memory & Cognition",
+    "difficulty": "Easy",
+    "question": "What is the classic capacity limit of human short-term memory identified by George Miller (1956)?",
+    "answer": "7 ± 2 items or chunks",
+    "explanation": "George Miller's 'Magical Number Seven, Plus or Minus Two' showed that short-term memory can retain around 5 to 9 meaningful units of information without active rehearsal.",
+    "options": [
+      "3 to 4 items",
+      "7 ± 2 items or chunks",
+      "12 to 15 items",
+      "Virtually unlimited capacity"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 26,
+    "category": "Memory & Cognition",
+    "difficulty": "Medium",
+    "question": "Remembering how to play the piano or tie shoelaces without conscious recollection is governed by:",
+    "answer": "Procedural (Implicit) Memory",
+    "explanation": "Procedural memory is a type of implicit (non-declarative) memory involving motor skills and conditioned habits, largely mediated by the cerebellum and basal ganglia.",
+    "options": [
+      "Episodic Memory",
+      "Semantic Memory",
+      "Procedural (Implicit) Memory",
+      "Prospective Memory"
+    ],
+    "correct_index": 2
+  },
+  {
+    "id": 27,
+    "category": "Memory & Cognition",
+    "difficulty": "Hard",
+    "question": "If you study French for two years and then study Spanish, and find that your old French vocabulary intrudes when trying to speak Spanish, you are experiencing:",
+    "answer": "Proactive Interference",
+    "explanation": "Proactive interference occurs when previously learned material disrupts the retrieval of newer information (Old interferes with New). Retroactive interference is when New disrupts Old.",
+    "options": [
+      "Retroactive Interference",
+      "Proactive Interference",
+      "Retrograde Amnesia",
+      "Anterograde Amnesia"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 28,
+    "category": "Memory & Cognition",
+    "difficulty": "Medium",
+    "question": "Overestimating the danger of commercial airplane travel after watching news coverage of a plane crash is an example of the:",
+    "answer": "Availability Heuristic",
+    "explanation": "The availability heuristic is a mental shortcut where judgments about the likelihood or frequency of an event are biased by how easily memorable examples come to mind.",
+    "options": [
+      "Representativeness Heuristic",
+      "Availability Heuristic",
+      "Anchoring and Adjustment Bias",
+      "Confirmation Bias"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 29,
+    "category": "Memory & Cognition",
+    "difficulty": "Medium",
+    "question": "Which limbic system structure is indispensable for consolidating new declarative (explicit) memories into permanent cortical storage?",
+    "answer": "Hippocampus",
+    "explanation": "The hippocampus consolidates explicit facts (semantic) and life events (episodic). Bilateral damage to the hippocampus (as seen in famous patient H.M.) leads to severe anterograde amnesia.",
+    "options": [
+      "Hypothalamus",
+      "Amygdala",
+      "Hippocampus",
+      "Medulla"
+    ],
+    "correct_index": 2
+  },
+  {
+    "id": 30,
+    "category": "Developmental Psychology",
+    "difficulty": "Medium",
+    "question": "In Jean Piaget's cognitive development theory, the realization that changing the container of a liquid does not change its volume is called:",
+    "answer": "Conservation",
+    "explanation": "Conservation is the understanding that core physical attributes (mass, volume, quantity) stay constant despite perceptual alterations in appearance, typically mastered in the Concrete Operational stage.",
+    "options": [
+      "Object Permanence",
+      "Egocentrism",
+      "Conservation",
+      "Centration"
+    ],
+    "correct_index": 2
+  },
+  {
+    "id": 31,
+    "category": "Developmental Psychology",
+    "difficulty": "Easy",
+    "question": "A 5-month-old infant stops searching for a ball when it rolls behind an opaque cushion, acting as though it ceased to exist. The child has not yet mastered:",
+    "answer": "Object Permanence",
+    "explanation": "Object permanence—the cognitive realization that entities continue to exist even when unperceived—is a hallmark milestone of Piaget's sensorimotor stage (emerging around 8 months).",
+    "options": [
+      "Object Permanence",
+      "Abstract Reasoning",
+      "Egocentric Orientation",
+      "Animistic Thinking"
+    ],
+    "correct_index": 0
+  },
+  {
+    "id": 32,
+    "category": "Developmental Psychology",
+    "difficulty": "Medium",
+    "question": "According to Erik Erikson's eight stages of psychosocial development, what central crisis dominates adolescence?",
+    "answer": "Identity vs. Role Confusion",
+    "explanation": "During adolescence (ages 12-18), teens test roles, beliefs, and values to forge a coherent personal identity. Failing to do so causes role confusion and a fragmented sense of self.",
+    "options": [
+      "Autonomy vs. Shame and Doubt",
+      "Industry vs. Inferiority",
+      "Identity vs. Role Confusion",
+      "Intimacy vs. Isolation"
+    ],
+    "correct_index": 2
+  },
+  {
+    "id": 33,
+    "category": "Developmental Psychology",
+    "difficulty": "Hard",
+    "question": "In Mary Ainsworth's Strange Situation assessment, a toddler who explores freely while the parent is nearby, shows distress when the parent leaves, and is swiftly comforted upon return demonstrates:",
+    "answer": "Secure Attachment",
+    "explanation": "Secure attachment reflects responsive, attuned parenting; the child views the parent as a reliable secure base from which to explore the surrounding environment.",
+    "options": [
+      "Insecure-Avoidant Attachment",
+      "Secure Attachment",
+      "Insecure-Resistant / Ambivalent Attachment",
+      "Disorganized Attachment"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 34,
+    "category": "Developmental Psychology",
+    "difficulty": "Hard",
+    "question": "A person refuses to run a red light at 3:00 AM on an empty country road purely because 'the law is the law and order must be maintained.' Under Lawrence Kohlberg's model, this reflects:",
+    "answer": "Conventional Morality",
+    "explanation": "Conventional morality centers on upholding social conventions, duty, obeying laws, and maintaining public order to avoid chaos or gain social approval.",
+    "options": [
+      "Preconventional Morality",
+      "Conventional Morality",
+      "Postconventional Morality",
+      "Sensorimotor Morality"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 35,
+    "category": "Motivation & Emotion",
+    "difficulty": "Easy",
+    "question": "In Abraham Maslow's Hierarchy of Human Needs, which category of needs sits at the base and must be satisfied first?",
+    "answer": "Physiological Needs",
+    "explanation": "Physiological survival requirements (food, water, oxygen, homeostasis) form the foundation of Maslow's pyramid. Higher psychosocial needs become prominent only after basic survival needs are met.",
+    "options": [
+      "Safety and Security Needs",
+      "Belonging and Love Needs",
+      "Physiological Needs",
+      "Self-Actualization"
+    ],
+    "correct_index": 2
+  },
+  {
+    "id": 36,
+    "category": "Motivation & Emotion",
+    "difficulty": "Medium",
+    "question": "Clark Hull proposed that physiological needs create internal biological states of tension that organisms are motivated to reduce to maintain equilibrium. This is known as:",
+    "answer": "Drive-Reduction Theory",
+    "explanation": "Drive-reduction theory argues that biological deficits (e.g., dehydration) generate unpleasant drives (thirst), directing behaviors to restore internal balance (homeostasis).",
+    "options": [
+      "Arousal Optimization Theory",
+      "Drive-Reduction Theory",
+      "Incentive Expectancy Theory",
+      "Instinct Evolutionary Theory"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 37,
+    "category": "Motivation & Emotion",
+    "difficulty": "Hard",
+    "question": "Which theory of emotion asserts that experiencing an emotion requires both physiological arousal AND a cognitive appraisal or cognitive label for that arousal?",
+    "answer": "Schachter-Singer Two-Factor Theory",
+    "explanation": "Stanley Schachter and Jerome Singer's Two-Factor theory posits that raw physiological arousal is non-specific, and the specific emotion we feel depends on our cognitive interpretation of our context.",
+    "options": [
+      "James-Lange Theory",
+      "Cannon-Bard Theory",
+      "Schachter-Singer Two-Factor Theory",
+      "Zajonc-LeDoux Theory"
+    ],
+    "correct_index": 2
+  },
+  {
+    "id": 38,
+    "category": "Motivation & Emotion",
+    "difficulty": "Medium",
+    "question": "When people receive extrinsic rewards (such as cash) for an activity they were already intrinsically interested in doing, their enjoyment of the task often declines. This is called:",
+    "answer": "The Overjustification Effect",
+    "explanation": "The overjustification effect occurs when an external incentive shifts the perceived reason for engaging in an activity from internal satisfaction to extrinsic payment.",
+    "options": [
+      "Cognitive Dissonance",
+      "The Overjustification Effect",
+      "Social Compensation",
+      "Learned Helplessness"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 39,
+    "category": "Social Psychology",
+    "difficulty": "Medium",
+    "question": "The tendency to attribute other people's negative behaviors to their internal character traits while ignoring situational constraints is called the:",
+    "answer": "Fundamental Attribution Error",
+    "explanation": "The Fundamental Attribution Error (FAE) is our tendency to explain others' behavior by overestimating dispositional factors (e.g., 'they are lazy') while ignoring situational pressures (e.g., 'they had an emergency').",
+    "options": [
+      "Actor-Observer Bias",
+      "Fundamental Attribution Error",
+      "Self-Serving Bias",
+      "Halo Effect"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 40,
+    "category": "Social Psychology",
+    "difficulty": "Easy",
+    "question": "In Solomon Asch's landmark line experiments, approximately 75% of participants conformed at least once to an incorrect answer due to:",
+    "answer": "Normative Social Influence",
+    "explanation": "Normative social influence is the desire to fit in, gain social approval, and avoid ridicule or ostracism from the group, even when the group's visual judgment was plainly erroneous.",
+    "options": [
+      "Informational Social Influence",
+      "Normative Social Influence",
+      "Physical Coercion",
+      "Authoritarian Conditioning"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 41,
+    "category": "Social Psychology",
+    "difficulty": "Medium",
+    "question": "In Stanley Milgram's classic obedience experiments, approximately what percentage of ordinary participants administered the maximum 450-volt electric shock when commanded by the experimenter?",
+    "answer": "65%",
+    "explanation": "Despite expressing severe moral discomfort, approximately 65% of participants complied fully up to the highest voltage level (450 volts, labeled 'XXX'), illustrating the alarming power of perceived authority.",
+    "options": [
+      "Less than 3%",
+      "25%",
+      "65%",
+      "99%"
+    ],
+    "correct_index": 2
+  },
+  {
+    "id": 42,
+    "category": "Social Psychology",
+    "difficulty": "Medium",
+    "question": "The bystander effect, where individuals are less likely to help a person in distress when other people are present, is primarily caused by:",
+    "answer": "Diffusion of Responsibility",
+    "explanation": "Darley and Latané demonstrated that when multiple observers witness an emergency, each person assumes someone else has intervened or will call for help, diffusing individual accountability.",
+    "options": [
+      "Group Polarization",
+      "Social Facilitation",
+      "Diffusion of Responsibility",
+      "Deindividuation"
+    ],
+    "correct_index": 2
+  },
+  {
+    "id": 43,
+    "category": "Social Psychology",
+    "difficulty": "Easy",
+    "question": "Leon Festinger's theory stating that individuals experience psychological tension when their behaviors conflict with their attitudes is known as:",
+    "answer": "Cognitive Dissonance Theory",
+    "explanation": "Cognitive dissonance is the uncomfortable tension that arises from contradictory beliefs or values vs actions. People resolve this tension by modifying attitudes, rationalizing actions, or changing behavior.",
+    "options": [
+      "Social Comparison Theory",
+      "Cognitive Dissonance Theory",
+      "Self-Perception Theory",
+      "Reactance Theory"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 44,
+    "category": "Social Psychology",
+    "difficulty": "Easy",
+    "question": "The tendency of individuals to exert less effort when working together in a group on a collective task compared to working individually is termed:",
+    "answer": "Social Loafing",
+    "explanation": "Social loafing occurs when individual contributions are pooled and not separately monitored or evaluated, prompting some group members to slack off.",
+    "options": [
+      "Social Loafing",
+      "Social Inhibition",
+      "Groupthink",
+      "Deindividuation"
+    ],
+    "correct_index": 0
+  },
+  {
+    "id": 45,
+    "category": "Personality & Clinical",
+    "difficulty": "Easy",
+    "question": "According to Sigmund Freud's structural model of personality, which agency operates on the 'reality principle' to mediate between primal impulses and moral demands?",
+    "answer": "The Ego",
+    "explanation": "The Ego operates on the reality principle, realistically seeking to satisfy the primal desires of the Id (pleasure principle) while respecting the moral restrictions imposed by the Superego.",
+    "options": [
+      "The Id",
+      "The Ego",
+      "The Superego",
+      "The Libido"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 46,
+    "category": "Personality & Clinical",
+    "difficulty": "Medium",
+    "question": "Which of the following is NOT one of the 'Big Five' (Five-Factor Model / OCEAN) personality dimensions?",
+    "answer": "Perfectionism",
+    "explanation": "The Big Five traits represent the acronym OCEAN: Openness to experience, Conscientiousness, Extraversion, Agreeableness, and Neuroticism. Perfectionism is a distinct facet, not a primary domain.",
+    "options": [
+      "Openness to Experience",
+      "Conscientiousness",
+      "Perfectionism",
+      "Neuroticism"
+    ],
+    "correct_index": 2
+  },
+  {
+    "id": 47,
+    "category": "Personality & Clinical",
+    "difficulty": "Easy",
+    "question": "What is the standard diagnostic manual published by the American Psychiatric Association used by mental health clinicians in the United States?",
+    "answer": "DSM-5 (Diagnostic and Statistical Manual of Mental Disorders)",
+    "explanation": "The DSM-5 provides clinical criteria, symptom thresholds, and differential diagnostic guidance for recognizing and classifying mental disorders.",
+    "options": [
+      "ICD-11 Manual",
+      "DSM-5 (Diagnostic and Statistical Manual of Mental Disorders)",
+      "MMPI Diagnostic Handbook",
+      "Psychiatric Pharmacopeia"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 48,
+    "category": "Personality & Clinical",
+    "difficulty": "Medium",
+    "question": "Which anxiety disorder is characterized by chronic, excessive, uncontrollable worry about various everyday life circumstances lasting at least six months?",
+    "answer": "Generalized Anxiety Disorder (GAD)",
+    "explanation": "GAD is characterized by persistent, non-specific ('free-floating') worry accompanied by physical symptoms such as motor tension, restlessness, irritability, and sleep disturbances.",
+    "options": [
+      "Panic Disorder",
+      "Generalized Anxiety Disorder (GAD)",
+      "Agoraphobia",
+      "Social Anxiety Disorder"
+    ],
+    "correct_index": 1
+  },
+  {
+    "id": 49,
+    "category": "Personality & Clinical",
+    "difficulty": "Medium",
+    "question": "A clinical diagnosis of Bipolar I Disorder requires the occurrence of at least one:",
+    "answer": "Manic Episode",
+    "explanation": "Bipolar I is diagnosed by the presence of at least one manic episode (characterized by abnormally elevated mood, grandiosity, decreased need for sleep, and risky behavior). Bipolar II involves hypomania and major depression.",
+    "options": [
+      "Major Depressive Episode only",
+      "Panic Attack",
+      "Manic Episode",
+      "Dissociative Episode"
+    ],
+    "correct_index": 2
+  },
+  {
+    "id": 50,
+    "category": "Personality & Clinical",
+    "difficulty": "Easy",
+    "question": "Cognitive Behavioral Therapy (CBT), pioneered by Aaron Beck and Albert Ellis, centers on identifying and restructuring:",
+    "answer": "Automatic cognitive distortions and maladaptive thought patterns",
+    "explanation": "CBT operates on the principle that psychological distress is maintained by distorted perceptions and automatic negative cognitions (e.g., catastrophic thinking). Reframing these thoughts alters both emotional states and behaviors.",
+    "options": [
+      "Repressed childhood unconscious conflicts",
+      "Unresolved psychosexual fixations",
+      "Automatic cognitive distortions and maladaptive thought patterns",
+      "Conditioned somatic reflexes through hypnosis"
+    ],
+    "correct_index": 2
+  }
+]
