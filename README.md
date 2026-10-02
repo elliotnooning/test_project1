@@ -12,7 +12,7 @@ You can run the web app using either **Node.js** or **Python 3**. Both require *
 
 1. Open PowerShell or Terminal in the project directory:
    ```powershell
-   cd c:\Users\ellio\dev\test_project1
+   cd c:\path\test_project1
    ```
 
 2. Start the web application:
@@ -32,7 +32,7 @@ You can run the web app using either **Node.js** or **Python 3**. Both require *
 
 1. Open PowerShell or Terminal in the project directory:
    ```powershell
-   cd c:\Users\ellio\dev\test_project1
+   cd c:\path\test_project1
    ```
 
 2. Start the server:
